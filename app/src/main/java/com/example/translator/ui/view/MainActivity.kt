@@ -94,6 +94,9 @@ class MainActivity : AppCompatActivity(), BaseView {
             tvError.visibility = View.GONE
             rvResult.visibility = View.VISIBLE
 
+            if (data.isEmpty()) {
+                Toast.makeText(this@MainActivity, R.string.no_results, Toast.LENGTH_SHORT).show()
+            }
             mainAdapter.submitList(data)
         }
     }
