@@ -3,6 +3,9 @@ package com.example.translator.data
 import com.google.gson.annotations.SerializedName
 
 data class WordResponseDto(
+    @SerializedName("id")
+    val id: Int,
+
     @SerializedName("text")
     val text: String,
 

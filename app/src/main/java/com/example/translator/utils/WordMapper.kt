@@ -8,6 +8,7 @@ import com.example.translator.domain.entity.Translation
 import com.example.translator.domain.entity.Word
 
 fun WordResponseDto.toWord() = Word(
+    id = id,
     text = text,
     meanings = meanings.map { dto -> dto.toMeaning() }
 )
